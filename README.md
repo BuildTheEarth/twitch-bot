@@ -41,6 +41,7 @@ Subcommands
 <table>
   <tr>
     <td align="center"><a href="https://github.com/cAttte"><img src="https://avatars.githubusercontent.com/u/26514199?v=4?s=100" width="100px;" alt=""/><br /><sub><b>cAttte</b></sub></a><br /><a href="https://github.com/BuildTheEarth/twitch-bot/commits?author=cAttte" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://xboxbedrock.github.io"><img src="https://avatars.githubusercontent.com/u/68715625?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Xbox</b></sub></a><br /><a href="https://github.com/BuildTheEarth/twitch-bot/commits?author=XboxBedrock" title="Code">💻</a> <a href="#projectManagement-XboxBedrock" title="Project Management">📆</a></td>
   </tr>
 </table>
 
