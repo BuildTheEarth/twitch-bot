@@ -1,0 +1,12 @@
+{
+  "files": [
+    "readme.md"
+  ],
+  "contributors": [],
+  "projectName": "twitch-bot",
+  "projectOwner": "BuildTheEarth",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "contributorsPerLine": 6
+}
