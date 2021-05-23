@@ -1,7 +1,19 @@
-﻿# BTELiveBOT
-This is the official bot that runs on the BTELiveBot account.
+<div align="center">
 
-# Modules
+<img width="128" src="assets/logo.gif" />
+
+# BTELiveBOT
+
+_This is the official bot that runs on the BTELiveBot account._
+
+</div>
+
+## BuildTheEarth
+
+Join us in this massive project as we recreate the Earth in Minecraft, in 1:1 scale, one block at a time. [**Discord Server**][invite]
+
+
+## Modules
 Currently the only Module that this has is snippets
 
 Note this assumes the prefix is `=`
@@ -17,8 +29,9 @@ Subcommands
  • **delete:** Delete a snippet (moderator/broadcaster only). `=snippets delete <name> <language>`
   • **language:** List all languages a snippet is tranlated to. `=snippets language <name>`
 
-# Setup
-We can offer almost no support on this as this is customised for BTE's needs
+## Setup
+We can offer almost no support on this as this is customised for BTE's needs.
+
 This has only been tested on [Python 3.9.0](https://www.python.org/downloads/release/python-390/) and we cannot guarantee it works on older versions
 ___
 
@@ -56,3 +69,6 @@ You need to run `bot.py` in order to start it
 
     python bot.py
 
+<!-- References -->
+
+[invite]: https://discord.gg/QEkPmBy
