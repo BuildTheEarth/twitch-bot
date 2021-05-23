@@ -21,6 +21,15 @@
         "code",
         "projectManagement"
       ]
+    },
+    {
+      "login": "vicrobex",
+      "name": "vicrobex",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56770982?v=4",
+      "profile": "https://github.com/vicrobex",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "projectName": "twitch-bot",
