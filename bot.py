@@ -10,35 +10,36 @@ with open("config.json") as e:
 	NAME = conf['username']
 	OWNER = conf['channel']
 	PREFIX = conf['prefix']
+	DB_URL = conf['db_url']
 	if bool(TOKEN):
 		if isinstance(TOKEN, str) == False:
 			print("token must be a string")
 			quit()
-	if bool(CLIENT_ID):
+	elif bool(CLIENT_ID):
 		if isinstance(CLIENT_ID, str) == False:
 			print("client_id must be a string")
 			quit()
-	if bool(OWNER):
+	elif bool(OWNER):
 		if isinstance(TOKEN, str) == False:
 			print("channel must be a string")
 			quit()
-	if bool(NAME):
+	elif bool(NAME):
 		if isinstance(TOKEN, str) == False:
 			print("username must be a string")
 			quit()
-	if bool(PREFIX):
+	elif bool(PREFIX):
 		if isinstance(TOKEN, str) == False:
 			print("prefix must be a string")
 			quit()
+	elif bool(PREFIX):
 		if isinstance(TOKEN, str) == False:
-			print("prefix must be a string")
+			print("db_url must be a string")
 			quit()
+	else:
+		print("please fill out your config")
+		quit()
 
-class Config:
-	def prefix(self):
-		with open("config.json") as e:
-			conf = json.load(e)
-			return conf['prefix']
+
 class Bot(SingleServerIRCBot):
 	def __init__(self):
 		self.COMMAND = commandhandler.CommandHandler()
@@ -83,4 +84,3 @@ class Bot(SingleServerIRCBot):
 if __name__ == "__main__":
 	bot = Bot()
 	bot.start()
-	
