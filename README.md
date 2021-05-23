@@ -33,6 +33,14 @@ Subcommands
 -   **language:** List all languages a snippet is tranlated to.
     `=snippets language <name>`
 
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://allcontributors.org) specification. Contributions of any kind are welcome!
+
 ## Setup
 
 We can offer almost no support on this as this is customized for BTE's needs.
