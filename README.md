@@ -35,7 +35,7 @@ Subcommands
 
 ## Setup
 
-zWe can offer almost no support on this as this is customized for BTE's needs.
+We can offer almost no support on this as this is customized for BTE's needs.
 
 This has only been tested on [Python 3.9.0](https://www.python.org/downloads/release/python-390/) and we cannot guarantee it works on older versions.
 
