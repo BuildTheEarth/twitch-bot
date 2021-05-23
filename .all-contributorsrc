@@ -2,7 +2,17 @@
   "files": [
     "README.md"
   ],
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "cAttte",
+      "name": "cAttte",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26514199?v=4",
+      "profile": "https://github.com/cAttte",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
   "projectName": "twitch-bot",
   "projectOwner": "BuildTheEarth",
   "repoType": "github",
