@@ -1,13 +1,15 @@
 import sqlite3
 import textwrap
-from bot import Config
+from utils import Config
 from isolanghandler import isolang
+from sqlalchemy import create_engine
 class SnippetHandler:
 #snippet create is CREATE TABLE snippets (name text, content text, lang text);
 
 	def __init__(self):
 		conf = Config()
 		self.prefix = conf.prefix()
+		self.engine = create_engine(conf.db_url(), echo=True, future=True)
 
 	def listwithlangs(self): # return a dict of snippets
 		res = {}
@@ -33,7 +35,7 @@ class SnippetHandler:
 		if len(returnstr) > 470:
 			return textwrap.fill(returnstr, 470).split("\n")
 		return returnstr
-		
+
 	def getlanglist(self, name, format = True): # return a dict of snippets
 		res = {}
 		name = name.lower()
@@ -56,7 +58,7 @@ class SnippetHandler:
 				res[key] = str(" Languages: "+splitter.join(res[key])+ ".")
 		connection.close()
 		return res["=" + name]
-	
+
 	def list(self): # return a dict of snippets
 		res = {}
 		connection = sqlite3.connect('snippets.db')
@@ -64,7 +66,7 @@ class SnippetHandler:
 		for snippet in database.execute('SELECT * FROM snippets ORDER BY name'):
         		res[snippet[0]] = snippet[1]
 		connection.close()
-		
+
 		return res
 	def add(self, name, content, lang): #add snippet
 		if name == "snippets":
@@ -114,7 +116,7 @@ class SnippetHandler:
 		for snippets in database.execute("select * from snippets where name=:name and lang=:lang",{"name": name, "lang": lang}):
 			return snippets[1]
 
-			
+
 		connection.commit()
 		connection.close()
 		return False
