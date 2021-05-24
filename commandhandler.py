@@ -4,7 +4,7 @@ class CommandHandler:
 	def runcommand(self, message, role):
 		snippetcmd = snippethandler.SnippetHandler()
 		conf = Config()
-		prefix = conf.prefix()
+		prefix = conf.prefix
 		prefixlen = len(prefix)-1
 		if message[prefixlen] == prefix:
 			tempthing = message.lstrip(prefix).split(" ")
