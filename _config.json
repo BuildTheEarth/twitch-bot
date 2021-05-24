@@ -1,5 +1,5 @@
 {
-    "db_url":"",
+    "db_url":"sqlite:///snippets.db",
     "prefix": "=",
     "token": "",
     "client_id": "",
