@@ -66,12 +66,15 @@ class Bot(SingleServerIRCBot):
 
 
 	def on_pubmsg(self, cxn, event):
-		print(event)
 		tags = {kvpair["key"]: kvpair["value"] for kvpair in event.tags}
 		user = {"name": tags["display-name"], "id": tags["user-id"]}
 		message = event.arguments[0]
-		role = event.tags[1]['value']
-		reply = self.COMMAND.runcommand(message, role)
+		if event.tags[1]['value'] != None:
+			role = event.tags[1]['value']
+		else:
+			role = ""
+		messageID = event.tags[7]['value']
+		reply = self.COMMAND.runcommand(message, role, messageID)
 		if bool(reply):
 			if isinstance(reply, list):
 				for msg in reply:
