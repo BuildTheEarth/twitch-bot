@@ -66,6 +66,7 @@ class Bot(SingleServerIRCBot):
 
 
 	def on_pubmsg(self, cxn, event):
+		print(event)
 		tags = {kvpair["key"]: kvpair["value"] for kvpair in event.tags}
 		user = {"name": tags["display-name"], "id": tags["user-id"]}
 		message = event.arguments[0]
@@ -80,6 +81,14 @@ class Bot(SingleServerIRCBot):
 	def send_message(self, message):
 		self.connection.privmsg(self.CHANNEL, message)
 
+	def ban_user(self, username):
+		self.send_message(f"/ban {username}")
+
+	def timeout_user(self, username, seconds):
+		self.send_message(f"/timeout {username}")
+
+	def unpunish_user(self, username):
+		self.send_message(f"/unban {username}")
 
 if __name__ == "__main__":
 	bot = Bot()
