@@ -1,7 +1,15 @@
 import snippethandler
 from utils import Config
+import re
+
 class CommandHandler:
-	def runcommand(self, message, role):
+	def __init__(self):
+		self.regexLink = re.compile(r"""https?:\/\/(?!clips.twitch.tv)[^./]+(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,4}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)""")
+	def runcommand(self, message, role, messageID):
+		if not ("moderator" in role or "broadcaster" in role or "subscriber" in role):
+			if self.regexLink.search(message) != None:
+				return f"/delete {messageID}"
+			
 		snippetcmd = snippethandler.SnippetHandler()
 		conf = Config()
 		prefix = conf.prefix
